@@ -4,8 +4,18 @@
 
   // --- Navbar: solid background on scroll ---
   const nav = document.querySelector(".nav");
-  const onScroll = () => nav.classList.toggle("scrolled", window.scrollY > 24);
-  onScroll();
+  const applyScrolled = () => nav.classList.toggle("scrolled", window.scrollY > 24);
+  // coalesce scroll events into one read/write per frame
+  let ticking = false;
+  const onScroll = () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => {
+      applyScrolled();
+      ticking = false;
+    });
+  };
+  applyScrolled();
   window.addEventListener("scroll", onScroll, { passive: true });
 
   // --- Mobile menu toggle ---
