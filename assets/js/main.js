@@ -11,14 +11,17 @@
   // --- Mobile menu toggle ---
   const toggle = document.querySelector(".nav-toggle");
   const links = document.querySelector(".nav-links");
-  toggle.addEventListener("click", () => {
-    const open = links.classList.toggle("open");
+  const setToggle = (open) => {
     toggle.setAttribute("aria-expanded", String(open));
+    toggle.setAttribute("aria-label", open ? "メニューを閉じる" : "メニューを開く");
+  };
+  toggle.addEventListener("click", () => {
+    setToggle(links.classList.toggle("open"));
   });
   links.addEventListener("click", (e) => {
     if (e.target.tagName === "A") {
       links.classList.remove("open");
-      toggle.setAttribute("aria-expanded", "false");
+      setToggle(false);
     }
   });
 
@@ -80,7 +83,13 @@
   });
   lb.addEventListener("click", close);
   document.addEventListener("keydown", (e) => {
+    if (!lb.classList.contains("open")) return;
     if (e.key === "Escape") close();
+    // trap focus inside the dialog (only the close button is focusable)
+    if (e.key === "Tab") {
+      e.preventDefault();
+      lbClose.focus();
+    }
   });
 
   // --- Footer year ---
