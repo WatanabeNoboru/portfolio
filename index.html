@@ -71,9 +71,10 @@
       <div class="grid">
         <!-- 01 -->
         <article class="card wide reveal" style="--d:0s">
-          <div class="thumb">
-            <img src="assets/img/work-news.png" data-full="assets/img/work-news.png"
-                 alt="ブラウザ上でClaudeがニュース記事を要約・ランキング化しているAIニュース要約ツールの画面" loading="lazy" width="1600" height="1221">
+          <div class="thumb" role="button" tabindex="0" aria-label="AIニュース要約ツールのスクリーンショットを拡大表示">
+            <img src="assets/img/work-news.jpg" data-full="assets/img/work-news.jpg"
+                 alt="ブラウザ上でClaudeがニュース記事を要約・ランキング化しているAIニュース要約ツールの画面"
+                 loading="lazy" decoding="async" width="1600" height="1221">
             <span class="zoom" aria-hidden="true">⤢</span>
           </div>
           <div class="body">
@@ -86,9 +87,10 @@
 
         <!-- 02 -->
         <article class="card small reveal" style="--d:.1s">
-          <div class="thumb">
-            <img src="assets/img/work-skill.png" data-full="assets/img/work-skill.png"
-                 alt="VSCode上でClaude Codeを使い独自スキルやサブエージェントを開発している画面" loading="lazy" width="1600" height="1787">
+          <div class="thumb" role="button" tabindex="0" aria-label="Claude Code スキル開発のスクリーンショットを拡大表示">
+            <img src="assets/img/work-skill.jpg" data-full="assets/img/work-skill.jpg"
+                 alt="VSCode上でClaude Codeを使い独自スキルやサブエージェントを開発している画面"
+                 loading="lazy" decoding="async" width="1432" height="1600">
             <span class="zoom" aria-hidden="true">⤢</span>
           </div>
           <div class="body">
@@ -101,9 +103,10 @@
 
         <!-- 03 -->
         <article class="card wide reveal" style="--d:.15s">
-          <div class="thumb">
+          <div class="thumb" role="button" tabindex="0" aria-label="ドキュメント改善パイプラインのスクリーンショットを拡大表示">
             <img src="assets/img/work-pipeline.png" data-full="assets/img/work-pipeline.png"
-                 alt="Analyzer・Builder・Reviewerの3段階でドキュメントを分析・改善・評価するWebアプリの画面" loading="lazy" width="1600" height="1076">
+                 alt="Analyzer・Builder・Reviewerの3段階でドキュメントを分析・改善・評価するWebアプリの画面"
+                 loading="lazy" decoding="async" width="1600" height="1076">
             <span class="zoom" aria-hidden="true">⤢</span>
           </div>
           <div class="body">
@@ -155,8 +158,8 @@
       <p>制作のご相談・お問い合わせはこちらから。</p>
       <div class="links">
         <a class="btn btn-p" href="mailto:you@example.com">✉ Email</a>
-        <a class="btn btn-g" href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
-        <a class="btn btn-g" href="https://x.com/" target="_blank" rel="noopener">X</a>
+        <a class="btn btn-g" href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a class="btn btn-g" href="https://x.com/" target="_blank" rel="noopener noreferrer">X</a>
       </div>
     </div>
   </section>
@@ -165,9 +168,9 @@
   <footer>© <span id="year">2026</span> AI Dev Portfolio — built with Claude</footer>
 
   <!-- Lightbox -->
-  <div class="lightbox" aria-hidden="true" role="dialog" aria-label="拡大画像">
+  <div class="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="拡大画像">
     <button class="close" aria-label="閉じる">×</button>
-    <img src="" alt="">
+    <img alt="">
   </div>
 
   <script src="assets/js/main.js"></script>

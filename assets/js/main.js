@@ -45,25 +45,42 @@
   // --- Lightbox for screenshots ---
   const lb = document.querySelector(".lightbox");
   const lbImg = lb.querySelector("img");
+  const lbClose = lb.querySelector(".close");
+  let lastFocused = null;
+
   const open = (src, alt) => {
+    lastFocused = document.activeElement; // remember opener to restore focus later
     lbImg.src = src;
     lbImg.alt = alt || "";
     lb.classList.add("open");
     lb.setAttribute("aria-hidden", "false");
     document.body.style.overflow = "hidden";
+    lbClose.focus();
   };
   const close = () => {
+    if (!lb.classList.contains("open")) return;
     lb.classList.remove("open");
     lb.setAttribute("aria-hidden", "true");
     document.body.style.overflow = "";
+    lbImg.removeAttribute("src"); // free memory; avoid stale image flash
+    if (lastFocused && typeof lastFocused.focus === "function") lastFocused.focus();
   };
+
   document.querySelectorAll(".thumb").forEach((t) => {
     const img = t.querySelector("img");
-    t.addEventListener("click", () => open(img.dataset.full || img.src, img.alt));
+    const trigger = () => open(img.dataset.full || img.src, img.alt);
+    t.addEventListener("click", trigger);
+    // keyboard: Enter / Space activate the thumbnail (role="button")
+    t.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        trigger();
+      }
+    });
   });
   lb.addEventListener("click", close);
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && lb.classList.contains("open")) close();
+    if (e.key === "Escape") close();
   });
 
   // --- Footer year ---
