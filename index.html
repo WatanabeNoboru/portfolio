@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Dev Portfolio — Claudeで動くAIツールをつくる</title>
+  <meta name="description" content="Claude API・Claude Code を活用して、要約・分析・自動化のAIツールやエージェントを設計・実装。実際に動く制作実績を掲載したポートフォリオです。">
+  <meta name="author" content="AI Dev Portfolio">
+  <meta name="theme-color" content="#0d0c0a">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AI Dev Portfolio — Claudeで動くAIツールをつくる">
+  <meta property="og:description" content="Claude API・Claude Code を活用したAIツール・エージェント開発のポートフォリオ。">
+  <meta property="og:url" content="https://watanabenoboru.github.io/portfolio/">
+  <meta property="og:image" content="https://watanabenoboru.github.io/portfolio/assets/img/work-pipeline.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI Dev Portfolio">
+  <meta name="twitter:description" content="Claude を活用したAIツール・エージェント開発のポートフォリオ。">
+  <meta name="twitter:image" content="https://watanabenoboru.github.io/portfolio/assets/img/work-pipeline.png">
+
+  <link rel="canonical" href="https://watanabenoboru.github.io/portfolio/">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23ffae3b'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='18' font-weight='bold' text-anchor='middle' fill='%231a1206'%3EA%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ===== Nav ===== -->
+  <nav class="nav" aria-label="メインナビゲーション">
+    <div class="wrap">
+      <a class="brand" href="#top" aria-label="ホームへ">
+        <span class="mark">A</span><span>AI&nbsp;Dev&nbsp;Portfolio</span>
+      </a>
+      <button class="nav-toggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="nav-links">☰</button>
+      <div class="nav-links" id="nav-links">
+        <a href="#works">実績</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== Hero ===== -->
+  <header class="hero" id="top">
+    <div class="wrap">
+      <p class="eyebrow label">AI Tool &amp; Agent Developer</p>
+      <h1>Claudeで、<br><span class="grad">動くAIツール</span>をつくる。</h1>
+      <p class="lead">Claude API・Claude Code を活用し、要約・分析・自動化のAIツールやエージェントを設計・実装しています。アイデアを「実際に動くプロダクト」まで形にすることが得意です。</p>
+      <div class="cta">
+        <a class="btn btn-p" href="#works">制作実績を見る →</a>
+        <a class="btn btn-g" href="#contact">お問い合わせ</a>
+      </div>
+    </div>
+    <span class="scroll-hint" aria-hidden="true">SCROLL</span>
+  </header>
+
+  <!-- ===== Works ===== -->
+  <main>
+  <section id="works" aria-labelledby="works-title">
+    <div class="wrap">
+      <div class="reveal">
+        <p class="label">Works</p>
+        <h2 class="stitle" id="works-title">制作実績</h2>
+        <p class="ssub">Claude を中核に据えて作った、実際に動くAIツール3点。画像をクリックすると拡大できます。</p>
+      </div>
+
+      <div class="grid">
+        <!-- 01 -->
+        <article class="card wide reveal" style="--d:0s">
+          <div class="thumb">
+            <img src="assets/img/work-news.png" data-full="assets/img/work-news.png"
+                 alt="ブラウザ上でClaudeがニュース記事を要約・ランキング化しているAIニュース要約ツールの画面" loading="lazy" width="1600" height="1221">
+            <span class="zoom" aria-hidden="true">⤢</span>
+          </div>
+          <div class="body">
+            <span class="tag">Browser Extension</span>
+            <h3><span class="num">01 —</span> AIニュース要約ツール</h3>
+            <p>Claude をブラウザ上で起動し、ニュースサイトの記事をワンクリックで要約・ランキング化。毎日の情報収集にかかる時間を短縮します。</p>
+            <div class="stack"><span class="chip">Claude</span><span class="chip">Chrome Extension</span><span class="chip">要約 / 抽出</span></div>
+          </div>
+        </article>
+
+        <!-- 02 -->
+        <article class="card small reveal" style="--d:.1s">
+          <div class="thumb">
+            <img src="assets/img/work-skill.png" data-full="assets/img/work-skill.png"
+                 alt="VSCode上でClaude Codeを使い独自スキルやサブエージェントを開発している画面" loading="lazy" width="1600" height="1787">
+            <span class="zoom" aria-hidden="true">⤢</span>
+          </div>
+          <div class="body">
+            <span class="tag">Agent / Skill</span>
+            <h3><span class="num">02 —</span> Claude Code スキル開発</h3>
+            <p>独自スキル・サブエージェントを設計し、開発作業そのものを自動化。</p>
+            <div class="stack"><span class="chip">Claude Code</span><span class="chip">Agent 設計</span></div>
+          </div>
+        </article>
+
+        <!-- 03 -->
+        <article class="card wide reveal" style="--d:.15s">
+          <div class="thumb">
+            <img src="assets/img/work-pipeline.png" data-full="assets/img/work-pipeline.png"
+                 alt="Analyzer・Builder・Reviewerの3段階でドキュメントを分析・改善・評価するWebアプリの画面" loading="lazy" width="1600" height="1076">
+            <span class="zoom" aria-hidden="true">⤢</span>
+          </div>
+          <div class="body">
+            <span class="tag">Web App</span>
+            <h3><span class="num">03 —</span> ドキュメント改善パイプライン</h3>
+            <p>Analyzer → Builder → Reviewer の3段階でドキュメントを分析・改善・評価する、1ファイル完結のWebアプリ。Anthropic API 経由でその場に結果を表示します。</p>
+            <div class="stack"><span class="chip">Anthropic API</span><span class="chip">HTML / JS</span><span class="chip">3-stage pipeline</span></div>
+          </div>
+        </article>
+
+        <!-- placeholder -->
+        <article class="card small placeholder reveal" style="--d:.2s">
+          <div class="body">
+            <span class="tag">More</span>
+            <h3>次の作品を制作中</h3>
+            <p style="margin-top:6px">Coming soon…</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== About ===== -->
+  <section id="about" aria-labelledby="about-title">
+    <div class="wrap about">
+      <div class="reveal">
+        <p class="label">About</p>
+        <h2 id="about-title">つくって、動かして、改善する。</h2>
+        <p>「学びたい」で止めず、実際に動くものを形にすることを大切にしています。Claude を中心としたAIツール開発で、日々の業務やワークフローの効率化を解決します。設計から実装、改善のループまで一気通貫で進めるのが強みです。</p>
+      </div>
+      <div class="reveal" style="--d:.1s">
+        <p class="label" style="margin-bottom:6px">Skills</p>
+        <div class="skills">
+          <span class="s">Claude API</span>
+          <span class="s">Claude Code</span>
+          <span class="s">プロンプト設計</span>
+          <span class="s">HTML / CSS / JS</span>
+          <span class="s">エージェント設計</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Contact ===== -->
+  <section id="contact" class="contact" aria-labelledby="contact-title">
+    <div class="wrap reveal">
+      <p class="label">Contact</p>
+      <h2 id="contact-title">お気軽にご連絡ください</h2>
+      <p>制作のご相談・お問い合わせはこちらから。</p>
+      <div class="links">
+        <a class="btn btn-p" href="mailto:you@example.com">✉ Email</a>
+        <a class="btn btn-g" href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn btn-g" href="https://x.com/" target="_blank" rel="noopener">X</a>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <footer>© <span id="year">2026</span> AI Dev Portfolio — built with Claude</footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" aria-hidden="true" role="dialog" aria-label="拡大画像">
+    <button class="close" aria-label="閉じる">×</button>
+    <img src="" alt="">
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
